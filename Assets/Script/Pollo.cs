@@ -29,14 +29,17 @@ public class Pollo : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            myRigidBody2D.velocity = Vector2.up * speed;
-        }
+        
     }
 
     private void Update()                               // Esto es para que el pollo mire hacia el sitio donde se ha acordado(en este caso el spwan de tuberías)
     {
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            myRigidBody2D.velocity = Vector2.up * speed;
+        }
+
         Vector3 targetPosition = lookAt.position;
         targetPosition.x = targetPosition.x - transform.position.x;
         targetPosition.y = targetPosition.y - transform.position.y;
